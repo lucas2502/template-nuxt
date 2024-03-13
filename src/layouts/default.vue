@@ -1,5 +1,7 @@
 <template>
-  
+  <div>
+    <nuxt-page />
+  </div>
 </template>
 
 <script lang="ts" setup></script>
@@ -12,8 +14,6 @@
   font-family: 'Inter', sans-serif;
   margin: 0;
   font-size: 13px;
-}
-.admin-page-layout {
   background-color: #f6f6f6;
 }
 </style>

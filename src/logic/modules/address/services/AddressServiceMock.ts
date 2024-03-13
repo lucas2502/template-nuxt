@@ -1,5 +1,5 @@
-import { IAddressService } from './AddresService';
-import { AddressServiceDTO } from './AddressServiceDTO';
+import type { IAddressService } from './AddresService';
+import type { AddressServiceDTO } from './AddressServiceDTO';
 
 export class AddressServiceMock implements IAddressService {
   async getByZipCode(

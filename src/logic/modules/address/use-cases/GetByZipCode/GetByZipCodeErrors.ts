@@ -1,6 +1,6 @@
-import { Result } from '@/core/base/Result';
-import { UseCaseError } from '@/core/base/UseCaseError';
-import { ErrorCodeEnum } from '@/core/enums/ErrorCodeEnum';
+import { Result } from '~/logic/core/base/Result';
+import type { UseCaseError } from '~/logic/core/base/UseCaseError';
+import { ErrorCodeEnum } from '~/logic/core/enums/ErrorCodeEnum';
 
 export namespace GetByZipCodeErrors {
   export class InvalidZipCode extends Result<UseCaseError> {

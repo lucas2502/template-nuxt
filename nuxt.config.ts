@@ -8,7 +8,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
-  devtools: { enabled: true },
+  telemetry: false,
+  srcDir: 'src/',
   modules: [
     ['@pinia/nuxt', {}],
     [
@@ -16,8 +17,15 @@ export default defineNuxtConfig({
       {
         vueI18n: './i18n.config.ts'
       }
-    ]
+    ],
+    ['@nuxt/test-utils/module', {}]
   ],
+  vue: {
+    compilerOptions: {
+      isCustomElement: tag => tag.startsWith('ff-')
+    }
+  },
+
   runtimeConfig: {
     public: {
       api: {

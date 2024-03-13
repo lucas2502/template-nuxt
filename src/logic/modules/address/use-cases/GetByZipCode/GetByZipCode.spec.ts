@@ -1,16 +1,25 @@
-import { vi } from 'vitest';
+import { describe, beforeAll, test, expect, vi } from 'vitest';
+import { ErrorCodeEnum } from '~/logic/core/enums/ErrorCodeEnum';
+import type { GetByZipCodeDTO } from './GetByZipCodeDTO';
+import type { UseCase } from '~/logic/core/base/UseCase';
+import type { UseCaseError } from '~/logic/core/base/UseCaseError';
+vi.mock('~/helpers/Helper', () => {
+  return {
+    Helper: {
+      isTestMode: () => true,
+    },
+  };
+});
+
 import { AddressServiceMock } from '../../services/AddressServiceMock';
-import { GetByZipCodeDTO } from './GetByZipCodeDTO';
 import { GetByZipCodeUseCase } from './GetByZipCodeUseCase';
-import { UseCase } from '@/core/base/UseCase';
-import { ErrorCodeEnum } from '@/core/enums/ErrorCodeEnum';
-import { UseCaseError } from '@/core/base/UseCaseError';
 
 describe('UseCase: Address/GetByZipCode', () => {
   let useCase: UseCase<GetByZipCodeDTO.Request, GetByZipCodeDTO.Response>;
 
-  beforeAll(async () => {
-    useCase = (await import('.')).default;
+  beforeAll(() => {
+    const addressServiceMock = new AddressServiceMock();
+    useCase = new GetByZipCodeUseCase(addressServiceMock);
   });
 
   test('should get address with success', async () => {

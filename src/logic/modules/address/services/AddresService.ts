@@ -1,7 +1,8 @@
-import { AddressServiceDTO } from './AddressServiceDTO';
-import { HttpAdapter } from '@/core/adapter/HttpAdapter';
-import { HttpResponseBody } from '@/core/types/HttpResponseBody';
-import { Config } from '@/config';
+import type { HttpAdapter } from '~/logic/core/adapter/HttpAdapter';
+import type { AddressServiceDTO } from './AddressServiceDTO';
+import type { HttpResponseBody } from '~/logic/core/types/HttpResponseBody';
+
+const config = useRuntimeConfig();
 
 export interface IAddressService {
   getByZipCode(
@@ -16,7 +17,7 @@ export class AddressService implements IAddressService {
   async getByZipCode(
     input: AddressServiceDTO.GetByZipCode.Input
   ): Promise<AddressServiceDTO.GetByZipCode.Output> {
-    const url = `${Config.getInstance.apiBaseUrl}/v1/address-by-zipcode`;
+    const url = `${config.public.api.apiBaseUrl}/v1/address-by-zipcode`;
 
     const body = {
       zipCode: input.zipCode

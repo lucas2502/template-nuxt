@@ -1,13 +1,13 @@
-import { IAddressService } from '../../services/AddresService';
-import { GetByZipCodeDTO } from './GetByZipCodeDTO';
+import type { UseCase } from '~/logic/core/base/UseCase';
+import type { GetByZipCodeDTO } from './GetByZipCodeDTO';
+import type { IAddressService } from '../../services/AddresService';
+import { Helper } from '~/logic/core/helpers/Helper';
+import { left, right } from '~/logic/core/base/Either';
+import { AppError } from '~/logic/core/base/AppError';
+import { Result } from '~/logic/core/base/Result';
+import { HttpHelper } from '~/logic/core/helpers/HttpHelper';
+import type { CallError } from '~/logic/core/types/ErrorType';
 import { GetByZipCodeErrors } from './GetByZipCodeErrors';
-import { UseCase } from '@/core/base/UseCase';
-import { Helper } from '@/core/helpers/Helper';
-import { left, right } from '@/core/base/Either';
-import { Result } from '@/core/base/Result';
-import { HttpHelper } from '@/core/helpers/HttpHelper';
-import { CallError } from '@/core/types/ErrorType';
-import { AppError } from '@/core/base/AppError';
 
 export class GetByZipCodeUseCase
   implements UseCase<GetByZipCodeDTO.Request, GetByZipCodeDTO.Response>

@@ -1,7 +1,7 @@
+import type { Either } from '~/src/logic/core/base/Either';
 import { GetByZipCodeErrors } from './GetByZipCodeErrors';
-import { AppError } from '@/core/base/AppError';
-import { Either } from '@/core/base/Either';
-import { Result } from '@/core/base/Result';
+import type { AppError } from '~/src/logic/core/base/AppError';
+import type { Result } from '~/src/logic/core/base/Result';
 
 export namespace GetByZipCodeDTO {
   export interface Request {

@@ -9,7 +9,7 @@
     "parser": "@typescript-eslint/parser"
   },
   "extends": ["@nuxt/eslint-config", "plugin:prettier/recommended"],
-  "plugins": [],
+  "plugins": ["vitest"],
   "rules": {
     // "no-console": "error",
     "vue/valid-v-slot": "off"

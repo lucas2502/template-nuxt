@@ -1,4 +1,4 @@
-import { Address } from '../models/Address';
+import type { Address } from '../models/Address';
 
 export namespace AddressServiceDTO {
   export namespace GetByZipCode {

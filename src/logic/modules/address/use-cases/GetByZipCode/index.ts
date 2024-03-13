@@ -1,8 +1,8 @@
+import { Helper } from '~/helpers/Helper';
 import { AddressService } from '../../services/AddresService';
 import { AddressServiceMock } from '../../services/AddressServiceMock';
 import { GetByZipCodeUseCase } from './GetByZipCodeUseCase';
-import { HttpAdapter } from '@/core/adapter/HttpAdapter';
-import { Helper } from '@/core/helpers/Helper';
+import { HttpAdapter } from '~/logic/core/adapter/HttpAdapter';
 
 const MOCK = Helper.isTestMode();
 
