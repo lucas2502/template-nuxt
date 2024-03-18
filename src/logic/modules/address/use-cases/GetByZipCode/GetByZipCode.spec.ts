@@ -3,11 +3,12 @@ import { ErrorCodeEnum } from '~/logic/core/enums/ErrorCodeEnum';
 import type { GetByZipCodeDTO } from './GetByZipCodeDTO';
 import type { UseCase } from '~/logic/core/base/UseCase';
 import type { UseCaseError } from '~/logic/core/base/UseCaseError';
+
 vi.mock('~/helpers/Helper', () => {
   return {
     Helper: {
-      isTestMode: () => true,
-    },
+      isTestMode: () => true
+    }
   };
 });
 

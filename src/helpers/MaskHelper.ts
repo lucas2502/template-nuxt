@@ -31,7 +31,6 @@ export namespace MaskHelper {
     static WordAndNumber = (v?: number) => {
       return 'N'.repeat(v ?? 100);
     };
-
   }
 }
 

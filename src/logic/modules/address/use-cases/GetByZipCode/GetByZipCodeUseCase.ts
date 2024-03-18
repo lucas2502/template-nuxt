@@ -22,6 +22,7 @@ export class GetByZipCodeUseCase
     if (Helper.isEmpty(req.zipCode)) {
       return left(new AppError.RequiredFields());
     }
+
     try {
       if (!Helper.isCepValid(req.zipCode) || Helper.isEmpty(req.zipCode)) {
         return left(new GetByZipCodeErrors.InvalidZipCode());

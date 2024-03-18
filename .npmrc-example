@@ -1,0 +1,6 @@
+shamefully-hoist=true
+always-auth=true
+@fairfax:registry=https://pkgs.dev.azure.com/ntfairfaxdev/_packaging/ntfairfaxdev/npm/registry/
+//pkgs.dev.azure.com/ntfairfaxdev/_packaging/ntfairfaxdev/npm/registry/:username=
+//pkgs.dev.azure.com/ntfairfaxdev/_packaging/ntfairfaxdev/npm/registry/:_password=
+//pkgs.dev.azure.com/ntfairfaxdev/_packaging/ntfairfaxdev/npm/registry/:email=

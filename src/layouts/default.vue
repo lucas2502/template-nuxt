@@ -13,7 +13,10 @@
 * {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  font-size: 13px;
-  background-color: #f6f6f6;
+  font-size: 14px;
+  background-color: #f6f8fa;
 }
 </style>
+
+font-family: Aeonik; font-size: 14px; font-weight: 400; line-height: 20px;
+letter-spacing: 0em; text-align: left;
